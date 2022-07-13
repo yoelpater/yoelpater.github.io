@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Why I choose Jekyll + Github Pages to host my engineering blog!"
 date:   2022-07-13 10:38:47 +0800
 categories: jekyll update
 ---
