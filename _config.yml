@@ -24,12 +24,21 @@ description: >- # this means to ignore newlines until "baseurl:"
   Hi im a software engineer
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://yoel.dev" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: yoelpater
-github_username: yoelpater
 
 remote_theme: jekyll/minima
 plugins:
   - jekyll-feed
+author:
+  name: Yoel Pater
+  email: "me@yoel.dev"
+
+minima:
+  skin: dark
+  social_links:
+    twitter: yoelpater
+    github: yoelpater
+    instagram: yoelpater
+    linkedin: yoelpater
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
