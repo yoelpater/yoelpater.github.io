@@ -28,6 +28,7 @@ url: "https://yoel.dev" # the base hostname & protocol for your site, e.g. http:
 remote_theme: jekyll/minima
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
 author:
   name: Yoel Pater
   email: "me@yoel.dev"
