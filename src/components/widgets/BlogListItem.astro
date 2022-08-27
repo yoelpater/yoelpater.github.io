@@ -1,0 +1,31 @@
+---
+import { getFormattedDate } from "~/utils/getFormatedDate";
+
+const { post } = Astro.props;
+
+
+---
+
+<article class="max-w-md mx-auto md:max-w-none grid md:grid-cols-1 gap-6 md:gap-8">
+
+  <div>
+    <header>
+      <h2 class="text-xl sm:text-2xl font-bold leading-snug mb-2">
+        <a class="hover:text-blue-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200"
+          href={`/blog/${post.slug}`}>
+          {post.title}
+        </a>
+      </h2>
+    </header>
+    <p class="text-md sm:text-lg flex-grow">
+      {post.excerpt || post.description}
+    </p>
+    <footer class="flex items-center mt-4">
+      <div>
+        <span class="text-gray-500 dark:text-slate-400">
+          <time datetime={post.pubDate}>{getFormattedDate(post.pubDate)}</time>
+        </span>
+      </div>
+    </footer>
+  </div>
+</article>
