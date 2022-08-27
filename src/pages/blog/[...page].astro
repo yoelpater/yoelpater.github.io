@@ -1,10 +1,10 @@
 ---
-import Layout from "~/layouts/PageLayout.astro";
+import Layout from '~/layouts/PageLayout.astro';
 
-import { SITE } from "~/config.mjs";
-import { fetchPosts } from "~/utils/fetchPosts";
+import { SITE } from '~/config.mjs';
+import { fetchPosts } from '~/utils/fetchPosts';
 
-import BlogList from "~/components/widgets/BlogList.astro";
+import BlogList from '~/components/widgets/BlogList.astro';
 
 export async function getStaticPaths({ paginate }) {
   const posts = await fetchPosts();
@@ -18,9 +18,10 @@ const { page } = Astro.props;
 
 const currentPage = page.currentPage ?? 1;
 
-const title = `Blog ${currentPage > 1 ? `— Page ${currentPage} ` : ""}— ${SITE.name
-  }`;
-const description = "News and step-by-step guides about AstroWind";
+const title = `Blog ${currentPage > 1 ? `— Page ${currentPage} ` : ''}— ${
+  SITE.name
+}`;
+const description = 'News and step-by-step guides about AstroWind';
 const canonical = new URL(page.url.current, Astro.site);
 ---
 
