@@ -5,6 +5,7 @@ import { SITE } from '~/config.mjs';
 import { fetchPosts } from '~/utils/fetchPosts';
 
 import BlogList from '~/components/widgets/BlogList.astro';
+import { Page } from 'astro';
 
 export async function getStaticPaths({ paginate }) {
   const posts = await fetchPosts();
@@ -14,6 +15,9 @@ export async function getStaticPaths({ paginate }) {
   });
 }
 
+export interface Props {
+  page?: Page;
+}
 const { page } = Astro.props;
 
 const currentPage = page.currentPage ?? 1;

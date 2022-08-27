@@ -1,7 +1,11 @@
 ---
+import { Page } from 'astro';
 import BlogListItem from '~/components/widgets/BlogListItem.astro';
 import Pagination from '~/components/widgets/Pagination.astro';
 
+export interface Props {
+  page?: Page;
+}
 const { page } = Astro.props;
 ---
 

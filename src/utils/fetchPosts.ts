@@ -16,10 +16,23 @@ const load = async function () {
   return results;
 };
 
-let _posts;
+let _posts:{
+  pubDate: any;
+  canonical: any;
+  slug: any;
+  title: any;
+  description: any;
+  body: any;
+  image: any;
+  excerpt: any;
+  authors: any;
+  category: any;
+  tags: any;
+  readingTime: number;
+}[];
 
 export const fetchPosts = async () => {
-  _posts = _posts || load();
+  _posts = _posts || await load();
 
   return await _posts;
 };
