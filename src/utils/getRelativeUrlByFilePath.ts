@@ -1,4 +1,5 @@
-import path from "path";
+import * as path from "path";
+
 import { getProjectRootDir } from "./getProjectRootDir";
 
 const __srcFolder = path.join(getProjectRootDir(), "/src");

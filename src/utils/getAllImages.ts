@@ -1,5 +1,5 @@
 const load = async function () {
-  let images = [];
+  let images :Record<string, () => Promise<unknown>>;
   try {
     images = import.meta.glob("~/assets/images/*");
   } catch (e) {}
