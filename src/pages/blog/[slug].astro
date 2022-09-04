@@ -5,6 +5,7 @@ import { findImage } from '~/utils/findImage';
 
 import Layout from '~/layouts/PageLayout.astro';
 import BlogPost from '~/components/widgets/BlogPost.astro';
+import type { Post } from '~/utils/post';
 
 export async function getStaticPaths() {
   const posts = await fetchPosts();
@@ -13,6 +14,10 @@ export async function getStaticPaths() {
     params: { slug: post.slug },
     props: { post },
   }));
+}
+
+export interface Props {
+  post: Post;
 }
 
 const { post } = Astro.props;

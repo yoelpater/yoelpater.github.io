@@ -1,4 +1,5 @@
 import { getNormalizedPost } from "~/utils/getNormalizedPost";
+import { Post } from "./post";
 
 const load = async function () {
   const posts = import.meta.glob("~/data/posts/**/*.{md,mdx}", {
@@ -16,20 +17,7 @@ const load = async function () {
   return results;
 };
 
-let _posts:{
-  pubDate: any;
-  canonical: any;
-  slug: any;
-  title: any;
-  description: any;
-  body: any;
-  image: any;
-  excerpt: any;
-  authors: any;
-  category: any;
-  tags: any;
-  readingTime: number;
-}[];
+let _posts: Post[]
 
 export const fetchPosts = async () => {
   _posts = _posts || await load();

@@ -1,6 +1,12 @@
 ---
 import Picture from '~/components/core/Picture.astro';
 import { getFormattedDate } from '~/utils/getFormatedDate';
+import type { Post } from '~/utils/post';
+import TagsList from './TagsList.astro';
+
+export interface Props {
+  post: Post;
+}
 
 const { post } = Astro.props;
 ---
@@ -18,6 +24,7 @@ const { post } = Astro.props;
       >
         {post.title}
       </h1>
+      <TagsList tags={post.tags} />
 
       {
         post.image && (

@@ -1,7 +1,8 @@
 import getReadingTime from "reading-time";
+import type { Post } from "./post";
 
-export const getNormalizedPost = async (post) => {
-  const { frontmatter, compiledContent, rawContent, file } = post;
+export const getNormalizedPost = async (rawPost): Promise<Post> => {
+  const { frontmatter, compiledContent, rawContent, file } = rawPost;
 
   return {
     pubDate: frontmatter.pubDate,

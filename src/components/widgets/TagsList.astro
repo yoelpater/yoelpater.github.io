@@ -1,0 +1,17 @@
+---
+export interface Props {
+  tags: string[];
+}
+
+const { tags } = Astro.props;
+---
+
+<section class="flex flex-wrap justify-center space-x-2">
+  {
+    tags.map((tag) => (
+      <span class="px-4 py-2 rounded-full border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-300  font-semibold text-sm flex align-center w-max cursor-pointer active:bg-gray-300 dark:active:bg-gray-600 transition duration-300 ease">
+        {tag}
+      </span>
+    ))
+  }
+</section>
