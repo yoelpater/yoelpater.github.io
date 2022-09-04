@@ -1,5 +1,10 @@
 ---
 import { getFormattedDate } from '~/utils/getFormatedDate';
+import type { Post } from '~/utils/post';
+
+export interface Props {
+  post: Post;
+}
 
 const { post } = Astro.props;
 ---
