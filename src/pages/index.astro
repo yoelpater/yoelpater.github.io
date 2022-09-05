@@ -4,6 +4,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import { SITE } from '~/config.mjs';
 
 import Hero from '~/components/widgets/Hero.astro';
+import Counter from '~/components/react/Counter';
 
 const title = `${SITE.name} — Software Engineer`;
 const description = 'Currently a software engineer';
@@ -13,5 +14,6 @@ const canonical = new URL('', Astro.site);
 <Layout meta={{ title, description, canonical }}>
   <main>
     <Hero />
+    <Counter {...{count:0}} client:visible/>
   </main>
 </Layout>
