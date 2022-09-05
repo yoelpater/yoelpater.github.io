@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon';
+
 const {} = Astro.props;
 ---
 
@@ -12,29 +14,32 @@ const {} = Astro.props;
           >
             Hi, I am
             <span
-              class="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-700 dark:to-blue-200"
+              class="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-400 dark:to-blue-400"
             >
-              Yoel Pater
+              Yoel
             </span>
           </h1>
-          <p class="text-xl text-gray-600 mb-8 dark:text-slate-400">
-            I am a software engineer.
+          <p class="text-xl text-gray-600 mb-12 dark:text-slate-400">
+            I code and design.
           </p>
           <div class="max-w-none flex justify-center">
             <div>
               <a
                 class="btn text-white bg-blue-600 hover:bg-blue-800 mb-4 sm:mb-0 font-bold"
                 href="https://github.com/yoelpater"
-                target="_blank"
                 rel="noopener"
-                >Github
+              >
+                <Icon name="akar-icons:github-fill" class="w-5 h-5 mr-3" />
+                My Github
               </a>
             </div>
             <div>
               <a
                 class="btn text-white bg-gray-900 hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-800 ml-4"
                 href="/blog"
-                >Blogs
+              >
+                <Icon name="system-uicons:write" class="w-5 h-5 mr-3" />
+                Some of my writings
               </a>
             </div>
           </div>
