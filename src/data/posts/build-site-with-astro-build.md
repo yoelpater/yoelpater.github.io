@@ -27,3 +27,7 @@ The first feeling when trying Astro's default configuration, the development exp
 ## Astro is not only a static site generator
 
 The default option is indeed static site, where every changes you made, Astro will compile all the pages as a static HTML. Static sites is actually ideal for content based websites. As it is simpler to distribute it on the edge. Everything is precompiled so no rebuilding any HTML when user request a resource. Static site has more option for deploying and usually cheaper. For example, this website is hosted on Github Pages which actually is free [Link to how to deploy Astro to Github Pages](https://docs.astro.build/en/guides/deploy/github/). Then, if server side rendering is needed, Astro is able to support that too. But then it need some kind of server to do the server side HTML render.
+
+## What is cool from Astro
+
+Astro provides a framework to combine multiple Single Page Applications Frameworks in one project.
